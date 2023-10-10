@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Account | Tugas 5 PWEB</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="container py-5 px-5 h-150">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-6 d-none d-md-block">
+          <img src="login-image.svg" alt="" srcset="" class="img-fluid" />
+        </div>
+        <div class="col-md-6">
+          <h2>Login User</h2>
+          <p>Please login using your account information</p>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form-control"
+            />
+          </div>
+          <div class="row mt-2">
+            <div class="col-6 mb-3">
+              <input
+                type="checkbox"
+                name="remember"
+                id="remember"
+                class="form-check-input"
+              />
+              <label for="remember" class="form-check-label">Remember me</label>
+            </div>
+            <div class="col-6">
+              <p class="text-sm-end">
+                <a
+                  data-bs-target="#forgotModal"
+                  data-bs-toggle="modal"
+                  id="forgot"
+                  href="#forgot"
+                  >Forgot Password?</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-outline-primary" type="button">Login</button>
+            <p class="text-sm-center mt-2">
+              <a
+                data-bs-target="#registerModal"
+                data-bs-toggle="modal"
+                id="register"
+                href="#register"
+                >Don't have any account?</a
+              >
+              or Login using Social Media
+            </p>
+            <button
+              class="btn btn-dark"
+              type="button"
+              data-bs-target="#socmedLogin"
+              data-bs-toggle="modal"
+            >
+              <i class="bi bi-github"></i> GitHub Login
+            </button>
+            <button
+              class="btn btn-light"
+              type="button"
+              data-bs-target="#socmedLogin"
+              data-bs-toggle="modal"
+            >
+              <i class="bi bi-google"></i> Google Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="py-2 my-4">
+      <p class="text-center text-muted">© 2023, Informatics 2022</p>
+    </footer>
+    <div
+      class="modal fade"
+      id="forgotModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Lupa Password anda?
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Masukkan email anda dan kami akan mengirimkan link untuk mereset
+              password anda
+            </p>
+            <div class="mb-3">
+              <input
+                type="email"
+                name="emailForgot"
+                id="emailForgot"
+                class="form-control"
+                placeholder="Email address"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Submit Email</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Buat Akun Baru
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Masukkan data data yang diperlukan dibawah ini untuk mendaftar
+            </p>
+            <div class="form-group">
+              <div class="my-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nama"
+                  id="namaRegis"
+                  required
+                />
+              </div>
+              <div class="my-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Username"
+                  id="usernameRegis"
+                  required
+                />
+              </div>
+              <div class="my-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  id="emailRegis"
+                  required
+                />
+              </div>
+              <div class="my-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  id="passwordRegis"
+                  required
+                />
+              </div>
+              <div class="my-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Confirm Password"
+                  id="confirmPasswordRegis"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">
+              Submit Pendaftaran
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="socmedLogin"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Redirecting to social media
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Tunggu hingga proses autentikasi di aplikasi pihak ketiga berhasil
+            </p>
+            <div class="text-center justify-content-center">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+            <div class="wait mt-3" aria-hidden="true">
+              <h5 class="placeholder-glow">
+                <span class="placeholder col-6"></span>
+              </h5>
+              <p class="card-text placeholder-glow">
+                <span class="placeholder col-7"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-6"></span>
+                <span class="placeholder col-8"></span>
+              </p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>
